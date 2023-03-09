@@ -1,0 +1,22 @@
+import { CHANGE_CAPTAIN, REMOVE_PERSON } from "@/components/reducer/actions";
+
+const reducer = (state, action) => {
+  const { type, payload } = action;
+  switch (type) {
+    case CHANGE_CAPTAIN:
+      return {
+        ...state,
+        classCaptain: state.classCaptain === "Eni" ? "New Captain" : "Eni",
+      };
+    case REMOVE_PERSON:
+      let newPeople = state.people.filter((person) => person.id !== payload.id);
+      return {
+        ...state,
+        people: newPeople,
+      };
+    default:
+      return state;
+  }
+};
+
+export default reducer;

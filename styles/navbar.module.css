@@ -1,0 +1,19 @@
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.nav img {
+  height: 80px;
+  margin-right: 100px;
+}
+
+.nav a {
+  color: green;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 20px;
+}
